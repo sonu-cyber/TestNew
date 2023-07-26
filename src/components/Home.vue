@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h3>Home</h3>
+    <button class="btn" @click="displayResult">Click Me</button>
     <p>
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt harum
       hic doloribus quos ratione, culpa placeat doloremque tenetur blanditiis
@@ -21,6 +22,11 @@ export default {
   name: "Home",
   data() {
     return {};
+  },
+  methods: {
+    displayResult() {
+      return console.log("Displaying Result");
+    }
   }
 };
 </script>
@@ -36,6 +42,17 @@ h3 {
   color: rgb(200, 91, 23);
 }
 p {
-  color: darkgreen;
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+  color: rgb(98, 101, 98);
+}
+.btn {
+  width: 4.5rem;
+  height: 2.2rem;
+  background-color: forestgreen;
+  border-radius: 15%;
+  border: none;
 }
 </style>
